@@ -1,24 +1,5 @@
-class Bank_account:
-    def __init__(self, s):
-        self.owner = s
-        self.balance = 0
-    def get_balance(self):
-        print(f'{self.owner} has {self.balance} money')
-    def deposit(self, x):
-        self.balance += x
-    def withdraw(self, x):
-        if x <= self.balance:
-            self.balance -= x
-        else:
-            print("You don't have that much money!")
+ar = [i for i in range(1, 101)]
 
-x = Bank_account("Nurbek")
-x.deposit(100)
-x.deposit(50)
-x.get_balance()
-x.withdraw(140)
-x.get_balance()
-x.withdraw(20)
-x.get_balance()
-x.withdraw(10)
-x.get_balance()
+ar = filter(lambda a: sum([1 for i in range(1, a + 1) if a % i == 0]) == 2, ar)
+
+print(*ar)
